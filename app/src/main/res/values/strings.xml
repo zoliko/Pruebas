@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="TexViews">-----</string>
+    <string name="Descripcion">Descripcion</string>
+    <string name="Boton">INgresar</string>
+    <string name="txt_numero_nip">Ingresar con clave NIP</string>
+</resources>
