@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ventana_emergencias">
+
+    <ImageButton
+        android:id="@+id/ib_policia"
+        android:layout_width="121dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/Descripcion"
+        android:onClick="BtnsPolicia"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/police" />
+
+    <ImageButton
+        android:id="@+id/ib_ambulancia"
+        android:layout_width="121dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/Descripcion"
+        android:onClick="BtnsAmbulancia"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_policia"
+        app:srcCompat="@drawable/ambulance" />
+
+    <ImageButton
+        android:id="@+id/ib_bomberos"
+        android:layout_width="122dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/Descripcion"
+        android:onClick="BtnsBomberos"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_ambulancia"
+        app:srcCompat="@drawable/firefighter" />
+
+    <ImageButton
+        android:id="@+id/ib_grua"
+        android:layout_width="164dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="444dp"
+        android:layout_marginTop="204dp"
+        android:contentDescription="@string/Descripcion"
+        android:onClick="BtnsGrua"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grua" />
+
+    <Button
+        android:id="@+id/btn_policia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
+        android:onClick="BtnsPolicia"
+        android:text="@string/btn_policia"
+        app:layout_constraintStart_toEndOf="@+id/ib_policia"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ambulancia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="76dp"
+        android:onClick="BtnsAmbulancia"
+        android:text="@string/btn_ambulancia"
+        app:layout_constraintStart_toEndOf="@+id/ib_ambulancia"
+        app:layout_constraintTop_toBottomOf="@+id/btn_policia" />
+
+    <Button
+        android:id="@+id/btn_bomberos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="76dp"
+        android:onClick="BtnsBomberos"
+        android:text="@string/btn_bomberos"
+        app:layout_constraintStart_toEndOf="@+id/ib_bomberos"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ambulancia" />
+
+    <Button
+        android:id="@+id/btn_grua"
+        android:layout_width="147dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:onClick="BtnsGrua"
+        android:text="@string/btn_grua"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_grua" />
+
+    <TextView
+        android:id="@+id/txt_menuEmergencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/txt_SolcitacionEmergencias"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_noSolicitarMal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/txt_noAbusar"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_menuEmergencias" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

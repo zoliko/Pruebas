@@ -1,7 +1,25 @@
 <resources>
     <string name="app_name">My Application</string>
+    //ActivityMain
     <string name="TexViews">-----</string>
     <string name="Descripcion">Descripcion</string>
     <string name="Boton">INgresar</string>
     <string name="txt_numero_nip">Ingresar con clave NIP</string>
+    <string name="txt_Seleccio">Selecciona el menu. !!!</string>
+
+    //Ventana de sellecion (Taxis/sos)
+    <string name="txt_seleccione_taxi_sos">¿Que desea solicitar?</string>
+    <string name="emergencia">Solicitar una emergencia</string>
+    <string name="taxi">Solicitar un taxi</string>
+
+    //Pantalla de Sos
+    <string name="btn_policia">Solicitar policia</string>
+    <string name="btn_ambulancia">Solicitar ambulancia</string>
+    <string name="btn_bomberos">Solicitar bomberos</string>
+    <string name="btn_grua">Solicitar grua</string>
+    <string name="txt_SolcitacionEmergencias">Solicite una emergencia</string>
+    <string name="txt_noAbusar">Solo usar en caso de una verdadera emergencia</string>
+
+    //Pantalla Taxis
+    <string name="txt_seleccionTaxi">¿Que servicio desea utilizar?</string>
 </resources>

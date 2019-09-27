@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(this, "Escanee el codigo QR", Toast.LENGTH_SHORT).show();
                         etiqueta_menu.setText("codigo QR");
 
-                        Intent nueva_pantalla = new Intent(this,pruebatransicion.class);
-                        startActivity(nueva_pantalla);
+                        Intent pantalla_menuPrincipal = new Intent(this,ventana_menuPrincipal.class);
+                        startActivity(pantalla_menuPrincipal);
                         //finish();
 
 

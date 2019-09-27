@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ventana_menuPrincipal">
+
+    <ImageButton
+        android:id="@+id/taxi"
+        android:layout_width="267dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/Descripcion"
+        android:onClick="solicitar_taxi"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.634"
+        app:layout_constraintStart_toEndOf="@+id/sos"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/taxi" />
+
+    <ImageButton
+        android:id="@+id/sos"
+        android:layout_width="272dp"
+        android:layout_height="230dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="112dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/Descripcion"
+        android:onClick="Servicios_de_emergencia"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sos" />
+
+    <TextView
+        android:id="@+id/txt_Tax_Sos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txt_seleccione_taxi_sos"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="249dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:onClick="Servicios_de_emergencia"
+        android:text="@string/emergencia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sos" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="243dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="24dp"
+        android:onClick="solicitar_taxi"
+        android:text="@string/taxi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taxi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
