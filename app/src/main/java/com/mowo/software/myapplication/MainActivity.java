@@ -1,5 +1,6 @@
 package com.mowo.software.myapplication;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,6 +9,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,13 +40,14 @@ public class MainActivity extends AppCompatActivity {
             switch (view.getId())
                 {
                     case R.id.codigoqr:
+                        /*
                         Toast.makeText(this, "Escanee el codigo QR", Toast.LENGTH_SHORT).show();
                         etiqueta_menu.setText("codigo QR");
 
                         Intent pantalla_menuPrincipal = new Intent(this,ventana_menuPrincipal.class);
-                        startActivity(pantalla_menuPrincipal);
+                        startActivity(pantalla_menuPrincipal); */
                         //finish();
-
+                        new IntentIntegrator(MainActivity.this).initiateScan();
 
                         break;
                     case R.id.buscar:
@@ -68,4 +73,32 @@ public class MainActivity extends AppCompatActivity {
 
                 }
         }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+
+        if(result != null)
+            if (result.getContents() != null)
+            {
+
+                if("1".equals(result.getContents()))
+                    {
+
+                        etiqueta_menu.setText("codigo QR");
+                        Intent pantalla_menuPrincipal = new Intent(this,ventana_menuPrincipal.class);
+                        pantalla_menuPrincipal.putExtra("Codigo de cliente",result.getContents());
+                        startActivity(pantalla_menuPrincipal);
+                    }
+                else
+                    {
+                        Toast.makeText(this, "Usuario no registrado", Toast.LENGTH_SHORT).show();
+                    }
+
+
+            }
+
+    }
 }
