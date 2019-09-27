@@ -11,6 +11,12 @@
     <string name="txt_seleccione_taxi_sos">¿Que desea solicitar?</string>
     <string name="emergencia">Solicitar una emergencia</string>
     <string name="taxi">Solicitar un taxi</string>
+    <string name="Username">Username:</string>
+    <string name="Nombre">Nombre:</string>
+    <string name="Apellido">Apellido:</string>
+    <string name="telefono">num. Telefonico</string>
+    <string name="correo">Correo electronico</string>
+    <string name="Saldo">Saldo Actual: $0.00</string>
 
     //Pantalla de Sos
     <string name="btn_policia">Solicitar policia</string>

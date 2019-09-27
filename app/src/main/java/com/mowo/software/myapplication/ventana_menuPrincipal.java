@@ -32,5 +32,7 @@ public class ventana_menuPrincipal extends AppCompatActivity {
     //Metodo Solicitar un taxi
     public void solicitar_taxi (View view){
         tv1.setText("Taxi");
+
+
     }
 }
