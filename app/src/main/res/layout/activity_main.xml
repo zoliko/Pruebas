@@ -8,38 +8,47 @@
 
     <EditText
         android:id="@+id/txt_nip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="539dp"
+        android:layout_height="79dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="@string/txt_numero_nip"
         android:importantForAutofill="no"
         android:inputType="numberPassword"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="205dp"
+        android:layout_height="60dp"
         android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:onClick="NIP"
         android:text="@string/Boton"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toEndOf="@+id/txt_nip"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <HorizontalScrollView
-        android:isScrollContainer="true"
-        android:fadeScrollbars="true"
         android:id="@+id/horizontalScrollView"
-        android:layout_width="453dp"
-        android:layout_height="109dp"
+        android:layout_width="1118dp"
+        android:layout_height="322dp"
+        android:fadeScrollbars="true"
+        android:isScrollContainer="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,22 +57,86 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="15dp">
 
-            <ImageButton
-                android:id="@+id/codigoqr"
-                android:layout_width="89dp"
-                android:layout_height="92dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:contentDescription="@string/Descripcion"
-                android:onClick="Seleccion"
-                android:padding="15dp"
 
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/codigoqr" />
+
+
+            <LinearLayout
+                android:background="@drawable/fondo_menu_opciones"
+                android:layout_width="263dp"
+                android:layout_height="280dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewemergencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Emergencia"
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:id="@+id/emergencia"
+                    android:layout_width="209dp"
+                    android:layout_height="166dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/Descripcion"
+                    android:onClick="Seleccion"
+                    android:padding="15dp"
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/emergencia" />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textView555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/TexViews"
+                android:textColor="@android:color/background_light" />
+            <LinearLayout
+                android:background="@drawable/fondo_menu_opciones"
+                android:layout_width="263dp"
+                android:layout_height="280dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_codigoqr"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Escanear QR"
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:id="@+id/codigoqr"
+                    android:layout_width="209dp"
+                    android:layout_height="166dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/Descripcion"
+                    android:onClick="Seleccion"
+                    android:padding="15dp"
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/codigoqr" />
+
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/textView4"
@@ -73,39 +146,42 @@
                 android:text="@string/TexViews"
                 android:textColor="@android:color/background_light" />
 
-            <ImageButton
-
-                android:id="@+id/buscar"
-                android:layout_width="89dp"
-                android:layout_height="92dp"
+            <LinearLayout
+                android:background="@drawable/fondo_menu_opciones"
+                android:layout_width="263dp"
+                android:layout_height="280dp"
                 android:layout_weight="1"
-                android:contentDescription="@string/Descripcion"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                android:onClick="Seleccion"
-                android:padding="10dp"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/buscar" />
+                <TextView
+                    android:id="@+id/textView_buscar"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Busca tu NIP"
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:id="@+id/buscar"
+                    android:layout_width="209dp"
+                    android:layout_height="166dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/Descripcion"
+                    android:onClick="Seleccion"
+                    android:padding="10dp"
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/buscar" />
+
+            </LinearLayout>
 
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/TexViews"
-                android:textColor="@android:color/background_light" />
 
-            <ImageButton
-                android:id="@+id/ubicacion"
-                android:layout_width="89dp"
-                android:layout_height="92dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:contentDescription="@string/Descripcion"
-                android:onClick="Seleccion"
-                android:padding="15dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/ubicacion" />
+
 
             <TextView
                 android:id="@+id/textView2"
@@ -115,18 +191,42 @@
                 android:text="@string/TexViews"
                 android:textColor="@android:color/background_light" />
 
-            <ImageButton
-                android:id="@+id/emergencia"
-                android:layout_width="89dp"
-                android:layout_height="92dp"
-                android:layout_weight="1"
-                android:contentDescription="@string/Descripcion"
 
-                android:onClick="Seleccion"
-                android:padding="15dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/emergencia"
-                tools:srcCompat="@android:color/background_dark" />
+
+            <LinearLayout
+                android:background="@drawable/fondo_menu_opciones"
+                android:layout_width="263dp"
+                android:layout_height="280dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewubicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="¿Donde estoy?"
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:id="@+id/ubicacion"
+                    android:layout_width="240dp"
+                    android:layout_height="166dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/Descripcion"
+                    android:onClick="Seleccion"
+                    android:padding="15dp"
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ubicacion" />
+
+
+            </LinearLayout>
+
 
 
             <TextView
@@ -137,38 +237,82 @@
                 android:text="@string/TexViews"
                 android:textColor="@android:color/background_light" />
 
-            <ImageButton
-                android:id="@+id/about"
-                android:layout_width="89dp"
-                android:layout_height="92dp"
+
+
+            <LinearLayout
+                android:background="@drawable/fondo_menu_opciones"
+                android:layout_width="263dp"
+                android:layout_height="280dp"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:contentDescription="@string/Descripcion"
-                android:onClick="Seleccion"
-                android:padding="15dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/aboutus" />
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewabout"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Acerca de nosotros"
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:id="@+id/about"
+                    android:layout_width="209dp"
+                    android:layout_height="166dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/Descripcion"
+                    android:onClick="Seleccion"
+                    android:padding="15dp"
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/aboutus"/>
+
+            </LinearLayout>
 
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textView55"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/TexViews"
                 android:textColor="@android:color/background_light" />
 
-            <ImageButton
-                android:id="@+id/contacto"
-                android:layout_width="89dp"
-                android:layout_height="92dp"
+            <LinearLayout
+                android:background="@drawable/fondo_menu_opciones"
+                android:layout_width="263dp"
+                android:layout_height="280dp"
                 android:layout_weight="1"
-                android:contentDescription="@string/Descripcion"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                android:onClick="Seleccion"
-                android:padding="15dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/infocontacto" />
+                <TextView
+                    android:id="@+id/textViewcontacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Contacto"
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:id="@+id/contacto"
+                    android:layout_width="209dp"
+                    android:layout_height="166dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/Descripcion"
+                    android:onClick="Seleccion"
+                    android:padding="15dp"
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/infocontacto" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView6"
@@ -181,18 +325,6 @@
 
 
     </HorizontalScrollView>
-
-    <TextView
-        android:id="@+id/etiqueta_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/txt_Seleccio"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
