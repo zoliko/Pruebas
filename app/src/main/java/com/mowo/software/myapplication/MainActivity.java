@@ -123,7 +123,8 @@ public class MainActivity extends AppCompatActivity {
 
                         break;
                     case R.id.ubicacion:
-                        Toast.makeText(this, "Esta es su ubicacion actual", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(this, "Esta es su ubicacion actual", Toast.LENGTH_SHORT).show();
+
 
                         break;
                     case R.id.emergencia:
